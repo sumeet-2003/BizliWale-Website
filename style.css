@@ -1,0 +1,212 @@
+.text-img {
+  background-image: url("image2.jpeg"); /* Replace with your image path */
+  background-size: cover; 
+  color: transparent; /* Adjust text color for contrast */
+  display: inline-block;
+  -webkit-background-clip: text;
+  text-shadow: black;
+}
+.btn {
+  border-radius: 20px;
+  shape-outside: margin-box;
+}
+.btn:hover {
+  background-color: rgb(0, 174, 255);
+}
+h1 {
+  color: white;
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.865);
+  margin-bottom: 10px;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 42rem;
+  --card-width: calc(var(--card-height) / 2);
+}
+/**/
+#f-name{
+    width: 15rem;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#f-phone{
+    width: 15rem;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#f-email{
+    width: 15rem;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#f-address{
+    width: 15rem;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+/*  */
+
+.center{
+    margin-left: 10%;
+}
+.card{
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.71);
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  background-color: #ffcc00d4;
+}
+.inner-card{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  max-width: 23rem;
+  box-shadow: 0 10px 10px #0000009e;
+  height: calc(var(--card-height)*0.76);
+  margin-left: 5%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+
+}
+.form-card {
+  background: rgb(255, 213, 0);
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.form-card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #c70000,
+    #00b1c1 43%,
+    #8900c4
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 3.5s linear infinite;
+}
+
+.form-card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #ffaa00,
+    #00eaff 43%,
+    #0700db
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 3.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  50% {
+    --rotate: 180deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+/* form style */
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  max-width: 23rem;
+  box-shadow: 0 10px 10px #0000009e;
+  height: calc(var(--card-height)*0.9);
+  margin-left: 5%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold; /* Style text */
+}
+
+input, textarea ,select{
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem; /* Style text */
+}
+
+#bookNowBtn {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #00c711;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Style text */
+  font-weight: bold; /* Style text */
+}
+
+#bookNowBtn:hover {
+  outline: none;
+  background-color: #ffae00;
+}
+.contact-btn{
+  background-color: #ffffff8c;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin-left: 5px;
+  border: 4px solid black ;
+  border-radius: 15px;
+}
+.contact-btn:hover{
+  background-color: #ffae0058;
+  color: white;
+}
+.estimated-cost {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: green;
+  display:flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/trans-logo.png" type="image/x-icon">
+    <title>BiZLiWale</title>
+</head>
+
+<!-- 
+section-1 : header and intro
+section-2 : form and about
+section-3 : offers
+section-4 : get contact
+section-5 : footer with map and links 
+-->
+
+<body
+    style="background-image: url('./img/bg.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+    <div class="container-fluid ">
+        <!-- navbar starts -->
+        <div class="row">
+            <div class="col-md-12 mt-2 ">
+                <header>
+                    <nav class="navbar navbar-light bg " style="border-radius: 10px;">
+                        <div class="container-fluid ">
+                            <a class="navbar-brand" href="#">
+                                <img src="./img/bwLogo.png" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top img-fluid">
+                                <img src="./img/trans-logo.png" alt="" width="180" height="30" style="margin-top: 10px; margin-left: 5px;">
+                            </a>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <!-- navbar ends -->
+        <section id="section-1">
+            <div class="row  mb-4">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 ">
+                    <img src="./img/1.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row ">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 text-center">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 text-center">
+                            <a href="#section-2"> <button type="button" class="btn btn-warning ">Book Now</button></a>
+                            <a href="#section-4"><button type="button" class="btn btn-info ">Get Contact</button></a>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </section>
+        <section id="section-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="center">
+                                <div class="form-card " style="width: 90%;">
+                                    <div class="form-container">
+                                        <form id="bookingForm">
+                                            <label for="name">NAME</label>
+                                            <input type="text" id="name" name="name" required>
+                                            
+                                            <label for="contact">CONTACT</label>
+                                            <input type="tel" id="contact" name="contact" required>
+                                            
+                                            <label for="address">ADDRESS</label>
+                                            <textarea id="address" name="address" required></textarea>
+                                            
+                                            <label for="problem">PROBLEM</label>
+                                            <select id="problem" name="problem" required>
+                                                <option value="" disabled selected>Select a problem</option>
+                                                <option value="houseWiring">House Wiring</option>
+                                                <option value="fanFitting">Fan Fitting</option>
+                                                <option value="tubeLightFitting">Tube Light Fitting</option>
+                                                <option value="mcbFitting">MCB Fitting</option>
+                                                <option value="forepoleFitting">Forepole Fitting</option>
+                                                <option value="switchBoard">Switch Board</option>
+                                                <option value="openFitting">Open Fitting</option>
+                                                <option value="gidgerFitting">Gidger Fitting</option>
+                                                <option value="wallFanFitting">Wall Fan Fitting</option>
+                                                <option value="meterBoardFitting">Meter Board Fitting</option>
+                                                <option value="serviceCable">Service Cable</option>
+                                                <option value="houseWirring">House Wirring</option>
+                                                <option value="complexWirring">Complex Wirring</option>
+                                                <option value="fallCeilingRepairing">Fall Ceiling Repairing</option>
+                                                <option value="ropeLight">Rope Light</option>
+                                                <option value="tulluPump">Tullu Pump</option>
+                                                <option value="borePanel">Bore Panel</option>
+                                                <option value="coolerFitting">Cooler Fitting</option>
+                                                <option value="exhaust">Exhaust</option>
+                                                <option value="gateLightFitting">Gate Light Fitting</option>
+                                                <option value="other: ">Other (please specify below)</option>
+                                            </select>
+                                            
+                                            <textarea id="otherProblem" name="otherProblem" placeholder="Specify other problem (if any)" style="display:none;"></textarea>
+                                            
+                                            <p id="estimatedCost" class="estimated-cost"></p>
+                                            
+                                            <button type="submit" id="bookNowBtn" onclick="sendwhatsapp()">BOOK NOW</button>
+                                        </form>
+                                        <p id="confirmationMessage" style="display:none;">SENT!</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card" style="width: 100%;">
+                                <img src="./img/logo.png" class="card-img-top" alt="..."
+                                    style="height: 5rem ; width: 20rem;">
+                                <div class="card-body inner-card">
+                                    <img src="./img/about.png" alt="about" style="height: 25rem; width: 18rem;"><br>
+                                    <a href="#section-4"><button class="btn btn-info"
+                                            style="margin-left: 30%; margin-top: 1rem;">Get
+                                            Contact</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br><br><br>
+            </div>
+        </section><br>
+        <section id="section-3">
+            <div class="row  mb-4">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 ">
+                    <div class="card" style="padding-bottom: 2rem; padding-right: 1rem; padding-left: 1rem;">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <img src="./img/13.png" alt="" class="img-fluid"
+                                    style="margin-top: -4rem; margin-bottom: -2rem;">
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-8 text-center">
+                                        <!-- Carousel -->
+                                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                                            <!-- Indicators/dots -->
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#demo" data-bs-slide-to="0"
+                                                    class="active"></button>
+                                                <button type="button" data-bs-target="#demo"
+                                                    data-bs-slide-to="1"></button>
+                                                <button type="button" data-bs-target="#demo"
+                                                    data-bs-slide-to="2"></button>
+                                            </div>
+                                            <!-- The slideshow/carousel -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="./img/logo.png" alt="Los Angeles" class="d-block w-100">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="./img/logo.png" alt="Chicago" class="d-block w-100">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="./img/logo.png" alt="New York" class="d-block w-100">
+                                                </div>
+                                            </div>
+                                            <!-- Left and right controls/icons -->
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#demo"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#demo"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </button>
+                                        </div>
+                                        <!-- carousel ends -->
+                                        <img src="./img/board-man.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </section>
+        <section id="section-4">
+            <div class="row  mb-4">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 ">
+                    <div class="card" style="padding-bottom: 2rem; padding-right: 1rem; padding-left: 1rem;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 style="text-align: center;">FED UP WITH YOUR TRADITIONAL ELECTRICIAN?</h2>
+                                <h5 style="text-align: center;">Call BiZliWale now and get an electrician anywhere in
+                                    Raipur!</h5>
+                                <div class="row">
+                                    <div class="col-md-5 text-center">
+                                        <img src="./img/box-guy.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-7 text-center" style="margin-top: 3rem;">
+                                        <h5>We're ending the monopoly of traditional electricians, offering you faster,
+                                            reliable, and affordable services. Dial now and experience the difference
+                                            with Bijliwale.</h5>
+                                        <br>
+                                        <a href="tel:0771-352-0523" class="contact-btn"><i class="fa fa-phone"
+                                                style="font-size:18px"> </i> 0771-352-0523</a><br><br><br>
+                                        <a href="tel: 896-493-0559" class="contact-btn"><i class="fa fa-phone"
+                                                style="font-size:18px"> </i> 0896-493-0559</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card" style="padding-bottom: 2rem; padding-right: 1rem; padding-left: 1rem;"">
+                        <h2>Visit Our Offline Store</h2>
+                        <div class="text-center">
+                            <a href="https://maps.app.goo.gl/6RpmoaPUT4V5CYib7" target="_blank"><img src="./img/map.png" class="img-fluid" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </section><br>
+        <section id="section-5">
+            <!-- Footer -->
+            <footer class="bg-body-tertiary text-center">
+                <!-- Grid container -->
+                <div class="container p-4 card" style="background-color: rgba(255, 255, 255, 0.877);">
+                    <img src="./img/logo.png" alt="" class="img-fluid" style="height: 5rem; width: 17rem;">
+                    <h3>
+
+                    </h3>
+                    <!-- Section: Social media -->
+                    <section class="mb-4">
+                        <!-- Facebook -->
+                        <a data-mdb-ripple-init style="font-size: 24px;" class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.facebook.com/profile.php?id=61559372622859&mibextid=ZbWKwL" role="button"><i
+                                class="fa fa-facebook"></i></a>
+
+                        <!-- Instagram -->
+                        <a data-mdb-ripple-init style="font-size: 24px;" class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.instagram.com/bizliwale?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" role="button"><i
+                            class="fa fa-instagram"></i></a>
+
+                        <!-- Google -->
+                        <a data-mdb-ripple-init style="font-size: 24px;"  class="btn btn-outline btn-floating m-1" target="_blank" href="mailto: support@bizliwale.com" role="button"><i
+                                class="fa fa-envelope"></i></a>
+
+                        <!-- android -->
+                        <a data-mdb-ripple-init style="font-size: 24px;" class="btn btn-outline btn-floating m-1" target="_blank" href="#!" role="button"><i
+                                class="fa fa-android"></i></a>
+
+                        <!-- map -->
+                        <a data-mdb-ripple-init style="font-size: 24px;" class="btn btn-outline btn-floating m-1" target="_blank" href="https://maps.app.goo.gl/6RpmoaPUT4V5CYib7" role="button"><i
+                                class="fa fa-map-marker"></i></a>
+                    </section>
+                    <!-- Section: Social media -->
+                    <!-- Copyright -->
+                    <div class="text-center " style="background-color: rgba(0, 0, 0, 0.05);">
+                        <p>Developed By Chitrashala Production</p>
+                        © 2024 Copyright by Chitrashala Production
+                        <a class="text-reset fw-bold" href="https://chitrashalaproduction.com/" target="_blank">Visit US</a>
+                    </div>
+                    <!-- Copyright -->
+                </div>
+                <!-- Grid container -->
+
+
+            </footer>
+            <!-- Footer -->
+        </section>
+    </div>
+</body>
+
+</html>
